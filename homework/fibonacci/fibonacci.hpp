@@ -1,9 +1,23 @@
 #pragma once
 
 int fibonacci_iterative(int sequence) {
-    // TODO: Your implementation goes here
-    return 0;
+    int a = 0;
+    int b = 1;
+    if(sequence==0){
+        return 0;
+    }
+    else if(sequence==1){
+        return 1;
+    }
+    int next = 0;
+    for(int i = 2; i <= sequence; i++){
+        next = a + b;
+        a = b;
+        b = next;
+    }
+    return next;
 }
+
 
 int fibonacci_recursive(int sequence) {
     // TODO: Your implementation goes here
